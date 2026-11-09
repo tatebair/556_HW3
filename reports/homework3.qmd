@@ -15,8 +15,8 @@ print(df.dtypes)
 print(df.isna().sum())
 print(df["id"].is_unique)
 ```
-The dataset contains 120 observations and 5 variables. There are no missing values in any of the columns. Amzazing! 
-Additionally, the ID validation verifies that all student IDs are unique This data looks clean and is ready for matrix operations and further analytics without extra processing.
+The dataset contains 120 observations and 5 variables. There are no missing values in any of the columns. Amazing! 
+Additionally, the ID validation verifies that all student IDs are unique. This data looks clean and is ready for matrix operations and further analytics without extra processing.
 
 ##Part 2: 
 
@@ -44,7 +44,7 @@ print("Shape of y:", y.shape)
 print("Matrix Rank for X:", np.linalg.matrix_rank(X))
 print("Number of predictors excluding intercept", pred.shape[1])
 ```
-X and Y must have compatible shapes as they will be used to perform matrix computations, noteablly, beta(hat) =(XᵀX)⁻¹Xᵀy. These matrices must have compatible row dimensions. 
+X and Y must have compatible shapes as they will be used to perform matrix computations, notably, beta(hat) =(XᵀX)⁻¹Xᵀy. These matrices must have compatible row dimensions. 
 The intercept column of ones is included in X so that we can have a beta(naught) term and establish a baseline expected score. 
 Standardizing the predictors allows us to compare the magnitude of the resulting coefficients on a uniform scale, and it improves the numerical stability of the matrix inversion. 
 Broadcasting lets numpy implicitly expand 1D arrays of means and standard deviations to match the 2D predictor shape. 
@@ -131,7 +131,7 @@ Standardization is an amazing tool. We could see that the raw condition vs the s
 However, this is due to the difference in measurement units among the predictors. After standardization, we can now compare these on the same level of magnitude. 
 This allows for a much more stable 1.77 standardized condition number.
 
-(6) There are a few reproducibility factors from this homework, as well as prior homeworks, that I will carry forward to the final project. First, I will use relative paths. 
+( 6 ) There are a few reproducibility factors from this homework, as well as prior homeworks, that I will carry forward to the final project. First, I will use relative paths. 
 This is huge for allowing independent users to reproduce results from the code I have generated. I will work to isolate loaded data using a dedicated directory like data/raw or data/processed. 
 I also find it vitally important to not include changes of variables or hidden notebook states as the code progresses forward. 
 This may allow for the code to work but produce incorrect numbers for an independent user.
